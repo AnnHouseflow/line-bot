@@ -136,7 +136,7 @@
       window.location.reload()
     }
     async function main() {
-      await liff.init({ liffId: "1654046335-4BDKExAV" })
+      await liff.init({ liffId: "2007074279-RMENgdXV" })
       console.log("liff.isLoggedIn()", liff.isLoggedIn());
       const isAvailable = await liff.isApiAvailable('shareTargetPicker');
       console.log(isAvailable ? 'ShareTargetPicker available' : 'ShareTargetPicker unavailable');
@@ -151,7 +151,7 @@
     }
 
     function logIn(){
-      liff.login({ redirectUri: 'https://taichunmin.idv.tw/pug/liff-full/20211012-share-target-picker-is-multiple.html'})
+      liff.login()
     }
 
     main()
