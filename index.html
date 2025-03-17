@@ -11,7 +11,7 @@
 </head>
 <body>
   <button id="btnShare" onclick="sendShare()">Share Target Picker</button>
-  <button id="btnLogin" onclick="liff.login()">Log In</button>
+  <button id="btnLogin" onclick="logIn()">Log In</button>
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
@@ -136,7 +136,7 @@
       window.location.reload()
     }
     async function main() {
-      await liff.init({ liffId: "2005471249-dW7RY0wb" })
+      await liff.init({ liffId: "1654046335-4BDKExAV" })
       console.log("liff.isLoggedIn()", liff.isLoggedIn());
       const isAvailable = await liff.isApiAvailable('shareTargetPicker');
       console.log(isAvailable ? 'ShareTargetPicker available' : 'ShareTargetPicker unavailable');
@@ -149,6 +149,12 @@
         document.getElementById("btnLogin").style.display = "block"
       }
     }
+
+    function logIn(){
+      // liff.login({ redirectUri: 'https://taichunmin.idv.tw/pug/liff-full/20211012-share-target-picker-is-multiple.html'})
+      liff.login({ redirectUri: 'https://annhouseflow.github.io/line-bot/'})
+    }
+
     main()
   </script>
 </body>
